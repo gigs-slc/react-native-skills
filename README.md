@@ -4,13 +4,14 @@ The most comprehensive React Native, Expo, and React optimization skills for Cla
 
 ## Installation
 
-```bash
-# Add the marketplace
-claude plugins:marketplace:add github:gigs-slc/react-native-skills
+In Claude Code, run:
 
-# Install all skills
-claude plugins:install react-native-expo-complete@react-native-expo-skills
 ```
+/plugin marketplace add gigs-slc/react-native-skills
+/plugin install react-native-expo-complete@react-native-expo-skills
+```
+
+Then restart Claude Code to load the skills.
 
 ## What's Included
 
