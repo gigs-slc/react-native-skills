@@ -73,24 +73,47 @@ Delegate to these specialized agents based on task type:
 - ALWAYS update AI_PROGRESS.md after completing work
 - NEVER let sub-agents violate constraints
 
-### 2. Proper Agent Sequence
+### 2. Hub-and-Spoke Pattern (YOU ARE THE HUB)
+
+You control every transition. No sub-agent hands off directly to another.
+
 ```
 User Request
     ↓
-[Orchestrator reads constraints + progress]
+[YOU] ─── Read constraints + progress
     ↓
-[Architect Agent - if new feature/design needed]
+    ├──→ [Architect] ─── Returns design plan
     ↓
-[Implementation Agent - write code]
+[YOU] ─── APPROVE or REJECT plan
+         If rejected: Ask Architect to revise
+         If approved: Continue
     ↓
-[Code Review Agent - validate changes]
+    ├──→ [Implementation] ─── Returns completed code
     ↓
-[Performance Agent - if performance matters]
+[YOU] ─── VERIFY implementation matches plan
+         If mismatch: Send back to Implementation
+         If matches: Continue
     ↓
-[Release Gate Agent - before merge/ship]
+    ├──→ [Code Review] ─── Returns review verdict
     ↓
-[Orchestrator updates AI_PROGRESS.md]
+[YOU] ─── ACT on review
+         If rejected: Send to Implementation to fix
+         If approved: Continue
+    ↓
+    ├──→ [Performance] ─── Returns performance analysis
+    ↓
+[YOU] ─── DECIDE if issues are acceptable
+         If critical issues: Send to Implementation
+         If acceptable: Continue
+    ↓
+    ├──→ [Release Gate] ─── Returns SHIP or NO SHIP
+    ↓
+[YOU] ─── FINALIZE
+         If NO SHIP: Address blockers, restart relevant step
+         If SHIP: Update AI_PROGRESS.md, report to user
 ```
+
+**CRITICAL**: You MUST review and approve every sub-agent's output before proceeding.
 
 ### 3. Constraint Enforcement
 Before delegating any task, verify:
@@ -118,13 +141,33 @@ When receiving a task:
 
 User: "Add a logout button to the settings screen"
 
-Orchestrator:
-1. Reads AI_CONSTRAINTS.md (e.g., finds 300-line component limit)
-2. Reads AI_PROGRESS.md (e.g., checks for related work)
-3. Delegates to Architect Agent for design decision
-4. Delegates to Implementation Agent to write code
-5. Delegates to Code Review Agent to validate
-6. Updates AI_PROGRESS.md with completion
+**Step 1: YOU read governance**
+- Read AI_CONSTRAINTS.md → Find 300-line limit, required patterns
+- Read AI_PROGRESS.md → No conflicting work in progress
+
+**Step 2: YOU delegate to Architect**
+- Architect returns: "Add LogoutButton component, use authStore.logout()"
+- YOU review: Plan follows constraints? Uses correct patterns?
+- YOU approve: "Plan approved, proceeding to implementation"
+
+**Step 3: YOU delegate to Implementation**
+- Implementation returns: Code for LogoutButton.tsx
+- YOU verify: Does code match the plan? Under line limit?
+- YOU approve: "Implementation matches plan, proceeding to review"
+
+**Step 4: YOU delegate to Code Review**
+- Code Review returns: "APPROVED - no constraint violations"
+- YOU confirm: "Review passed, checking performance"
+
+**Step 5: YOU delegate to Performance (if needed)**
+- Performance returns: "No re-render issues detected"
+- YOU confirm: "Performance acceptable"
+
+**Step 6: YOU delegate to Release Gate**
+- Release Gate returns: "SHIP - all checks pass"
+- YOU finalize: Update AI_PROGRESS.md, report success to user
+
+**If ANY step fails**: YOU handle it. Send back to appropriate agent, don't skip ahead.
 
 ## Error Handling
 

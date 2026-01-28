@@ -47,27 +47,35 @@ Then restart Claude Code to load the skills.
 
 ### Agent Workflow
 
-The agents work together in a specific sequence:
+The Orchestrator is the **central hub** - every sub-agent reports back before the next step:
 
 ```
 User Request
     ↓
-[Orchestrator] - Reads constraints, delegates work
+[Orchestrator] ─── Reads constraints, analyzes task
     ↓
-[Architect] - Designs the solution (if new feature)
+    ├──→ [Architect] ─── Designs the solution
     ↓
-[Implementation] - Writes the code
+[Orchestrator] ─── Reviews & approves plan
     ↓
-[Code Review] - Validates the changes
+    ├──→ [Implementation] ─── Writes the code
     ↓
-[Performance] - Checks for performance issues (if applicable)
+[Orchestrator] ─── Verifies implementation matches plan
     ↓
-[Navigation] - Validates routing (if applicable)
+    ├──→ [Code Review] ─── Validates the changes
     ↓
-[Release Gate] - Final approval before ship
+[Orchestrator] ─── Confirms review passed
     ↓
-[Orchestrator] - Updates progress, reports completion
+    ├──→ [Performance] ─── Checks performance (if needed)
+    ↓
+[Orchestrator] ─── Confirms no performance issues
+    ↓
+    ├──→ [Release Gate] ─── Final ship/no-ship decision
+    ↓
+[Orchestrator] ─── Updates AI_PROGRESS.md, reports to user
 ```
+
+**Key principle**: No sub-agent hands off directly to another. The Orchestrator approves every transition.
 
 ### Orchestrator Agent
 
