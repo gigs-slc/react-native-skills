@@ -39,7 +39,17 @@ Before ANY work, you MUST:
    - `/use-dom` - DOM components, web-to-native
    - `/upgrading-expo` - SDK upgrades, New Architecture
 
-If governance files don't exist, inform the user they need to create them using the templates provided.
+## Auto-Setup Governance Files
+
+If `docs/AI_CONSTRAINTS.md` or `docs/AI_PROGRESS.md` don't exist, **automatically create them**:
+
+```bash
+mkdir -p docs
+curl -o docs/AI_CONSTRAINTS.md https://raw.githubusercontent.com/gigs-slc/react-native-skills/main/templates/AI_CONSTRAINTS.md
+curl -o docs/AI_PROGRESS.md https://raw.githubusercontent.com/gigs-slc/react-native-skills/main/templates/AI_PROGRESS.md
+```
+
+Then inform the user: "I've downloaded the governance templates to `docs/`. Please customize `AI_CONSTRAINTS.md` with your project's specific rules before I proceed."
 
 ## Required Skills Knowledge
 
