@@ -18,16 +18,16 @@ claude plugins:install react-native-expo-complete@react-native-expo-skills
 
 | Skill | Source | Content | Description |
 |-------|--------|---------|-------------|
-| `react-native` | **Callstack + Vercel** | 63 files | **THE ULTIMATE RN SKILL** - Combined profiling + patterns |
-| `react-best-practices` | Vercel | 59 rules | React patterns, hooks, performance, architecture |
-| `composition-patterns` | Vercel | 9 rules | Component composition, compound components |
-| `building-ui` | Expo | 13 refs | UI components, styling, animations, navigation |
-| `data-fetching` | Expo | - | fetch, axios, React Query, SWR, caching |
-| `api-routes` | Expo | - | API routes with Expo Router + EAS Hosting |
-| `dev-client` | Expo | - | Development client builds, TestFlight |
-| `tailwind-setup` | Expo | - | Tailwind CSS v4 + NativeWind v5 setup |
-| `upgrading-expo` | Expo | 3 refs | SDK upgrades, React 19, New Architecture |
-| `use-dom` | Expo | - | DOM components, web-to-native migration |
+| `react-native` | **Callstack + Vercel** | 65 files | **THE ULTIMATE RN SKILL** - Combined profiling + patterns |
+| `react-best-practices` | Vercel | 62 files | React patterns, hooks, performance, architecture |
+| `composition-patterns` | Vercel | 12 files | Component composition, compound components |
+| `building-ui` | Expo | 14 files | UI components, styling, animations, navigation |
+| `data-fetching` | Expo | 1 file | fetch, axios, React Query, SWR, caching |
+| `api-routes` | Expo | 1 file | API routes with Expo Router + EAS Hosting |
+| `dev-client` | Expo | 1 file | Development client builds, TestFlight |
+| `tailwind-setup` | Expo | 1 file | Tailwind CSS v4 + NativeWind v5 setup |
+| `upgrading-expo` | Expo | 4 files | SDK upgrades, React 19, New Architecture |
+| `use-dom` | Expo | 1 file | DOM components, web-to-native migration |
 
 ### The Unified `react-native` Skill
 
