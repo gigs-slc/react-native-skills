@@ -36,9 +36,12 @@ Before ANY navigation work:
 
 1. **Read AI_CONSTRAINTS.md** - Check for navigation constraints
 2. **Read AI_PROGRESS.md** - Check for related navigation work
-3. **Load the skills** - Reference navigation best practices:
-   - `/react-native` - Navigation rules from Vercel patterns
-   - `/building-ui` - Expo Router patterns and examples
+3. **Load the skills** - Reference ALL navigation best practices:
+   - `/react-native` - Navigation rules from Vercel (65 files) - **THE BIG ONE**
+   - `/building-ui` - Expo Router patterns and examples (14 files)
+   - `/react-best-practices` - React patterns for navigation state (62 files)
+   - `/api-routes` - API routes with Expo Router
+   - `/use-dom` - DOM navigation considerations
 4. **Map existing routes** - Understand current navigation structure
 
 ## Skills-Based Navigation Guidelines

@@ -36,9 +36,12 @@ Before ANY analysis:
 
 1. **Read AI_CONSTRAINTS.md** - Understand performance requirements
 2. **Read AI_PROGRESS.md** - Check for related performance work
-3. **Load the skills** - Reference performance guidelines:
-   - `/react-native` - Callstack profiling + Vercel patterns (65 files)
-   - `/react-best-practices` - React performance patterns
+3. **Load the skills** - Reference ALL performance guidelines:
+   - `/react-native` - Callstack profiling + Vercel patterns (65 files) - **THE BIG ONE**
+   - `/react-best-practices` - React performance patterns (62 files)
+   - `/composition-patterns` - Composition for performance (12 files)
+   - `/building-ui` - UI/animation performance (14 files)
+   - `/data-fetching` - Caching and fetch optimization
 
 ## Skills-Based Performance Analysis
 

@@ -36,8 +36,15 @@ Before ANY implementation:
 1. **Read AI_CONSTRAINTS.md** - Know the rules you MUST follow
 2. **Read AI_PROGRESS.md** - Understand current context
 3. **Load the skills** - Your code MUST follow these best practices:
-   - `/react-native` - Callstack + Vercel optimization patterns
-   - `/react-best-practices` - React patterns and architecture
+   - `/react-native` - Callstack + Vercel optimization patterns (65 files)
+   - `/react-best-practices` - React patterns and architecture (62 files)
+   - `/composition-patterns` - Component composition, compound components (12 files)
+   - `/building-ui` - Expo UI components, styling, animations (14 files)
+   - `/data-fetching` - fetch, axios, React Query, SWR, caching
+   - `/api-routes` - API routes with Expo Router + EAS Hosting
+   - `/tailwind-setup` - Tailwind CSS v4 + NativeWind v5
+   - `/use-dom` - DOM components, web-to-native migration
+   - `/upgrading-expo` - SDK upgrades, React 19, New Architecture
 4. **Read the Architecture Plan** - If one exists, follow it exactly
 5. **Read existing code** - Understand patterns before writing
 

@@ -35,9 +35,14 @@ Before ANY investigation:
 
 1. **Read AI_CONSTRAINTS.md** - Understand codebase rules
 2. **Read AI_PROGRESS.md** - Check for related work or known issues
-3. **Load the skills** - Know common bug patterns:
-   - `/react-native` - Common RN crash patterns and fixes
-   - `/react-best-practices` - React anti-patterns that cause bugs
+3. **Load the skills** - Know ALL common bug patterns:
+   - `/react-native` - Common RN crash patterns (65 files) - **THE BIG ONE**
+   - `/react-best-practices` - React anti-patterns (62 files)
+   - `/composition-patterns` - Component composition bugs (12 files)
+   - `/building-ui` - UI/animation issues (14 files)
+   - `/data-fetching` - Data fetching bugs
+   - `/navigation` - See `/building-ui` for Expo Router issues
+   - `/use-dom` - DOM component issues
 
 ## Skills-Based Bug Patterns
 

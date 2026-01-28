@@ -36,9 +36,16 @@ Before ANY review:
 
 1. **Read AI_CONSTRAINTS.md** - Know what rules to check against
 2. **Read AI_PROGRESS.md** - Understand what was supposed to be done
-3. **Load the skills** - Code must comply with these best practices:
-   - `/react-native` - Callstack + Vercel optimization patterns
-   - `/react-best-practices` - React patterns and architecture
+3. **Load the skills** - Code must comply with ALL best practices:
+   - `/react-native` - Callstack + Vercel optimization (65 files) - **THE BIG ONE**
+   - `/react-best-practices` - React patterns and architecture (62 files)
+   - `/composition-patterns` - Component composition (12 files)
+   - `/building-ui` - Expo UI patterns (14 files)
+   - `/data-fetching` - Data fetching patterns
+   - `/api-routes` - API route patterns
+   - `/tailwind-setup` - Styling patterns
+   - `/use-dom` - DOM component patterns
+   - `/upgrading-expo` - Migration patterns
 4. **Read the original plan** - If one exists, verify implementation matches
 
 ## Required Skills Knowledge

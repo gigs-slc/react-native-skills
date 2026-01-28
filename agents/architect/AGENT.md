@@ -38,9 +38,16 @@ Before ANY design work:
 
 1. **Read AI_CONSTRAINTS.md** - Understand what patterns are required/forbidden
 2. **Read AI_PROGRESS.md** - Check for related work or decisions
-3. **Load the skills** - Reference best practices for your designs:
-   - `/react-native` - Callstack + Vercel optimization patterns
-   - `/react-best-practices` - React patterns and architecture
+3. **Load the skills** - Reference ALL best practices for your designs:
+   - `/react-native` - Callstack + Vercel optimization (65 files) - **THE BIG ONE**
+   - `/react-best-practices` - React patterns and architecture (62 files)
+   - `/composition-patterns` - Component composition patterns (12 files)
+   - `/building-ui` - Expo UI, styling, animations (14 files)
+   - `/data-fetching` - Data fetching strategies
+   - `/api-routes` - API route architecture
+   - `/tailwind-setup` - Styling with Tailwind/NativeWind
+   - `/use-dom` - DOM component patterns
+   - `/upgrading-expo` - Migration considerations
 4. **Explore the codebase** - Understand existing patterns before proposing new ones
 
 ## Required Skills Knowledge

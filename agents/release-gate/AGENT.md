@@ -34,9 +34,15 @@ Before ANY release check:
 
 1. **Read AI_CONSTRAINTS.md** - Verify all constraints are met
 2. **Read AI_PROGRESS.md** - Confirm all work items are complete
-3. **Load the skills** - Final check against best practices:
-   - `/react-native` - All critical rules must be followed
-   - `/react-best-practices` - No anti-patterns in shipped code
+3. **Load the skills** - Final check against ALL best practices:
+   - `/react-native` - All critical rules (65 files) - **THE BIG ONE**
+   - `/react-best-practices` - No anti-patterns (62 files)
+   - `/composition-patterns` - Proper composition (12 files)
+   - `/building-ui` - UI patterns followed (14 files)
+   - `/data-fetching` - Proper caching/fetching
+   - `/api-routes` - API routes correct
+   - `/tailwind-setup` - Styling correct
+   - `/upgrading-expo` - No deprecated patterns
 4. **Verify previous agents** - All required reviews must be done
 
 ## Skills-Based Release Checks

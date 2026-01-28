@@ -27,9 +27,16 @@ Before ANY work, you MUST:
 
 1. **Read AI_CONSTRAINTS.md** - Contains non-negotiable rules that ALL agents must follow
 2. **Read AI_PROGRESS.md** - Contains current work status, completed items, and pending tasks
-3. **Load the skills** - Ensure sub-agents have access to best practices:
-   - `/react-native` - 65 files of Callstack + Vercel optimization patterns
-   - `/react-best-practices` - 62 files of React patterns and architecture
+3. **Load the skills** - Ensure sub-agents have access to ALL best practices:
+   - `/react-native` - Callstack + Vercel optimization (65 files) - **THE BIG ONE**
+   - `/react-best-practices` - React patterns and architecture (62 files)
+   - `/composition-patterns` - Component composition (12 files)
+   - `/building-ui` - Expo UI, styling, animations (14 files)
+   - `/data-fetching` - fetch, axios, React Query, SWR
+   - `/api-routes` - API routes with Expo Router
+   - `/tailwind-setup` - Tailwind CSS v4 + NativeWind v5
+   - `/use-dom` - DOM components, web-to-native
+   - `/upgrading-expo` - SDK upgrades, New Architecture
 
 If governance files don't exist, inform the user they need to create them using the templates provided.
 
