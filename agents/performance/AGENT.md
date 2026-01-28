@@ -2,6 +2,7 @@
 name: performance-re-render
 description: Performance review agent for identifying re-renders, memory issues, and optimization opportunities in React Native/Expo apps.
 license: MIT
+model: opus
 metadata:
   author: Premier 99 Software
   version: '1.0.0'

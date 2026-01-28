@@ -2,6 +2,7 @@
 name: react-native-expo-architect
 description: Software architect agent for designing React Native/Expo implementation plans. Use BEFORE any implementation begins for features, architectural decisions, and planning.
 license: MIT
+model: opus
 metadata:
   author: Premier 99 Software
   version: '1.0.0'

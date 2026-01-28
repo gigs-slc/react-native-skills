@@ -2,6 +2,7 @@
 name: mobile-release-gate
 description: Final release gate agent for production readiness checks. Use ONLY immediately before merging to main or shipping a release.
 license: MIT
+model: opus
 metadata:
   author: Premier 99 Software
   version: '1.0.0'

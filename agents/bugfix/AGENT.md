@@ -2,6 +2,7 @@
 name: react-native-expo-bugfix
 description: Bug investigation agent for diagnosing React Native/Expo runtime errors. Use to identify and isolate crashes, bugs, and errors without implementing fixes.
 license: MIT
+model: opus
 metadata:
   author: Premier 99 Software
   version: '1.0.0'

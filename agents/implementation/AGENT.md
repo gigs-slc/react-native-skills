@@ -2,6 +2,7 @@
 name: react-native-expo-implementation
 description: Implementation agent for writing production React Native/Expo code. Use AFTER an architecture plan exists to execute the defined implementation.
 license: MIT
+model: opus
 metadata:
   author: Premier 99 Software
   version: '1.0.0'

@@ -2,6 +2,7 @@
 name: navigation-expo-router
 description: Navigation specialist agent for Expo Router and React Navigation. Use when navigation behavior, routes, params, or deep links are involved.
 license: MIT
+model: opus
 metadata:
   author: Premier 99 Software
   version: '1.0.0'

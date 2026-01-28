@@ -2,6 +2,7 @@
 name: react-native-expo-code-review
 description: Code review agent for validating React Native/Expo changes. Use AFTER code has been written to review diffs, validate scope, and check for issues.
 license: MIT
+model: opus
 metadata:
   author: Premier 99 Software
   version: '1.0.0'
