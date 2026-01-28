@@ -15,7 +15,7 @@ Then restart Claude Code to load the skills.
 
 ## What's Included
 
-### 10 Skills with 130+ Rules
+### 10 Skills + 1 Agent + Templates
 
 | Skill | Source | Content | Description |
 |-------|--------|---------|-------------|
@@ -29,6 +29,29 @@ Then restart Claude Code to load the skills.
 | `tailwind-setup` | Expo | 1 file | Tailwind CSS v4 + NativeWind v5 setup |
 | `upgrading-expo` | Expo | 4 files | SDK upgrades, React 19, New Architecture |
 | `use-dom` | Expo | 1 file | DOM components, web-to-native migration |
+| `orchestrator` | Gigs SLC | 1 file | Master agent for coordinating AI sub-agents |
+
+### Orchestrator Agent
+
+The **Orchestrator Agent** coordinates AI sub-agents working on your codebase. It:
+- Enforces constraints defined in `AI_CONSTRAINTS.md`
+- Tracks progress in `AI_PROGRESS.md`
+- Delegates to specialized agents (Architect, Implementation, Review, etc.)
+- Ensures quality through proper agent sequencing
+
+### Project Governance Templates
+
+The `templates/` folder contains starter files for AI governance:
+
+| Template | Purpose |
+|----------|---------|
+| `AI_CONSTRAINTS.md` | Define non-negotiable rules for all AI agents |
+| `AI_PROGRESS.md` | Track work status, decisions, and blockers |
+
+**Setup:**
+1. Copy templates to your project's `docs/` folder
+2. Customize constraints for your codebase
+3. Reference in your `CLAUDE.md` or project instructions
 
 ### The Unified `react-native` Skill
 

@@ -24,7 +24,8 @@
         "./skills/dev-client",
         "./skills/tailwind-setup",
         "./skills/upgrading-expo",
-        "./skills/use-dom"
+        "./skills/use-dom",
+        "./agents/orchestrator"
       ]
     }
   ]
