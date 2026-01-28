@@ -88,17 +88,25 @@ The **Orchestrator Agent** is the master coordinator. It:
 
 ### Project Governance Templates
 
-The `templates/` folder contains starter files for AI governance:
+The Orchestrator and sub-agents require these governance files. Download and customize for your project:
 
-| Template | Purpose |
-|----------|---------|
-| `AI_CONSTRAINTS.md` | Define non-negotiable rules for all AI agents |
-| `AI_PROGRESS.md` | Track work status, decisions, and blockers |
+| Template | Purpose | Download |
+|----------|---------|----------|
+| `AI_CONSTRAINTS.md` | Define non-negotiable rules for all AI agents | [Download](https://raw.githubusercontent.com/gigs-slc/react-native-skills/main/templates/AI_CONSTRAINTS.md) |
+| `AI_PROGRESS.md` | Track work status, decisions, and blockers | [Download](https://raw.githubusercontent.com/gigs-slc/react-native-skills/main/templates/AI_PROGRESS.md) |
 
 **Setup:**
-1. Copy templates to your project's `docs/` folder
-2. Customize constraints for your codebase
-3. Reference in your `CLAUDE.md` or project instructions
+```bash
+# Download templates to your project
+mkdir -p docs
+curl -o docs/AI_CONSTRAINTS.md https://raw.githubusercontent.com/gigs-slc/react-native-skills/main/templates/AI_CONSTRAINTS.md
+curl -o docs/AI_PROGRESS.md https://raw.githubusercontent.com/gigs-slc/react-native-skills/main/templates/AI_PROGRESS.md
+```
+
+Then:
+1. Customize `AI_CONSTRAINTS.md` for your codebase rules
+2. Update `AI_PROGRESS.md` as work progresses
+3. Reference both in your `CLAUDE.md` or project instructions
 
 ### The Unified `react-native` Skill
 
