@@ -1,0 +1,31 @@
+{
+  "name": "react-native-expo-skills",
+  "owner": {
+    "name": "Gigs SLC",
+    "email": "griffin@premier99software.com",
+    "url": "https://github.com/gigs-slc"
+  },
+  "metadata": {
+    "description": "Complete React Native, Expo, and React skills for AI coding assistants. Combines Callstack, Expo, and Vercel best practices.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "react-native-expo-complete",
+      "description": "Complete React Native, Expo, and React optimization guide with 130+ rules covering performance, patterns, UI, animations, state management, and more.",
+      "source": "./",
+      "skills": [
+        "./skills/react-native",
+        "./skills/react-best-practices",
+        "./skills/composition-patterns",
+        "./skills/building-ui",
+        "./skills/data-fetching",
+        "./skills/api-routes",
+        "./skills/dev-client",
+        "./skills/tailwind-setup",
+        "./skills/upgrading-expo",
+        "./skills/use-dom"
+      ]
+    }
+  ]
+}
