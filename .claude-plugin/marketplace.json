@@ -1,7 +1,7 @@
 {
   "name": "react-native-expo-skills",
   "owner": {
-    "name": "Gigs SLC",
+    "name": "Premier 99 Software",
     "email": "griffin@premier99software.com",
     "url": "https://github.com/gigs-slc"
   },
@@ -25,7 +25,14 @@
         "./skills/tailwind-setup",
         "./skills/upgrading-expo",
         "./skills/use-dom",
-        "./agents/orchestrator"
+        "./agents/orchestrator",
+        "./agents/architect",
+        "./agents/implementation",
+        "./agents/code-review",
+        "./agents/bugfix",
+        "./agents/performance",
+        "./agents/navigation",
+        "./agents/release-gate"
       ]
     }
   ]

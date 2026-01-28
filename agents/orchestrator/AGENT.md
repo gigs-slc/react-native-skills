@@ -3,7 +3,7 @@ name: orchestrator
 description: Master orchestrator agent for coordinating AI sub-agents. Enforces constraints, tracks progress, and ensures quality through specialized agent delegation.
 license: MIT
 metadata:
-  author: Gigs SLC
+  author: Premier 99 Software
   version: '1.0.0'
   tags: orchestrator, agents, coordination, governance
 ---

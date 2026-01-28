@@ -15,7 +15,9 @@ Then restart Claude Code to load the skills.
 
 ## What's Included
 
-### 10 Skills + 1 Agent + Templates
+### 10 Skills + 8 Agents + Templates
+
+#### Skills
 
 | Skill | Source | Content | Description |
 |-------|--------|---------|-------------|
@@ -29,15 +31,52 @@ Then restart Claude Code to load the skills.
 | `tailwind-setup` | Expo | 1 file | Tailwind CSS v4 + NativeWind v5 setup |
 | `upgrading-expo` | Expo | 4 files | SDK upgrades, React 19, New Architecture |
 | `use-dom` | Expo | 1 file | DOM components, web-to-native migration |
-| `orchestrator` | Gigs SLC | 1 file | Master agent for coordinating AI sub-agents |
+
+#### Agents
+
+| Agent | Use When | Description |
+|-------|----------|-------------|
+| `orchestrator` | Coordinating multi-agent workflows | Master coordinator that enforces constraints and delegates to sub-agents |
+| `react-native-expo-architect` | BEFORE implementation | Designs features, makes architectural decisions, creates implementation plans |
+| `react-native-expo-implementation` | AFTER architecture plan exists | Writes production code following the approved plan |
+| `react-native-expo-code-review` | AFTER code is written | Reviews diffs, validates scope, checks for bugs and constraint violations |
+| `react-native-expo-bugfix` | Investigating runtime errors | Diagnoses crashes, bugs, and errors without implementing fixes |
+| `performance-re-render` | Performance matters | Identifies re-renders, memory leaks, JS thread issues |
+| `navigation-expo-router` | Navigation behavior involved | Validates routes, params, deep links, platform parity |
+| `mobile-release-gate` | Before merging/shipping | Final production-readiness check - SHIP or NO SHIP decision |
+
+### Agent Workflow
+
+The agents work together in a specific sequence:
+
+```
+User Request
+    ↓
+[Orchestrator] - Reads constraints, delegates work
+    ↓
+[Architect] - Designs the solution (if new feature)
+    ↓
+[Implementation] - Writes the code
+    ↓
+[Code Review] - Validates the changes
+    ↓
+[Performance] - Checks for performance issues (if applicable)
+    ↓
+[Navigation] - Validates routing (if applicable)
+    ↓
+[Release Gate] - Final approval before ship
+    ↓
+[Orchestrator] - Updates progress, reports completion
+```
 
 ### Orchestrator Agent
 
-The **Orchestrator Agent** coordinates AI sub-agents working on your codebase. It:
-- Enforces constraints defined in `AI_CONSTRAINTS.md`
+The **Orchestrator Agent** is the master coordinator. It:
+- Reads `AI_CONSTRAINTS.md` before any work begins
 - Tracks progress in `AI_PROGRESS.md`
-- Delegates to specialized agents (Architect, Implementation, Review, etc.)
-- Ensures quality through proper agent sequencing
+- Delegates to specialized agents based on task type
+- Ensures proper agent sequencing
+- Never violates constraints
 
 ### Project Governance Templates
 
