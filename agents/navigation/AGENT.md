@@ -36,7 +36,35 @@ Before ANY navigation work:
 
 1. **Read AI_CONSTRAINTS.md** - Check for navigation constraints
 2. **Read AI_PROGRESS.md** - Check for related navigation work
-3. **Map existing routes** - Understand current navigation structure
+3. **Load the skills** - Reference navigation best practices:
+   - `/react-native` - Navigation rules from Vercel patterns
+   - `/building-ui` - Expo Router patterns and examples
+4. **Map existing routes** - Understand current navigation structure
+
+## Skills-Based Navigation Guidelines
+
+### From `/react-native` Skill - Navigation Rules
+
+Reference `skills/react-native/rules/navigation-*.md`:
+
+```typescript
+// RULE: navigation-native-navigators
+// ALWAYS use native stack over JS stack
+import { createNativeStackNavigator } from '@react-navigation/native-stack';  // GOOD
+import { createStackNavigator } from '@react-navigation/stack';  // AVOID
+
+// Native tabs over JS tabs
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';  // Uses native
+```
+
+### From `/building-ui` Skill - Expo Router Patterns
+
+Reference `skills/building-ui/` for Expo Router specifics:
+- File-based routing structure
+- Layout components and nesting
+- Modal presentation
+- Deep linking configuration
+- Tab bar customization
 
 ## Expo Router Fundamentals
 

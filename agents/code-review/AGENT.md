@@ -36,7 +36,31 @@ Before ANY review:
 
 1. **Read AI_CONSTRAINTS.md** - Know what rules to check against
 2. **Read AI_PROGRESS.md** - Understand what was supposed to be done
-3. **Read the original plan** - If one exists, verify implementation matches
+3. **Load the skills** - Code must comply with these best practices:
+   - `/react-native` - Callstack + Vercel optimization patterns
+   - `/react-best-practices` - React patterns and architecture
+4. **Read the original plan** - If one exists, verify implementation matches
+
+## Required Skills Knowledge
+
+Check code against these skill rules:
+
+### Critical Violations from `/react-native` Skill (Auto-Reject)
+- [ ] `{value && <Component>}` where value could be 0 or ""
+- [ ] Text strings not wrapped in `<Text>` component
+- [ ] Using `FlatList` instead of `FlashList` for lists >20 items
+- [ ] Using RN `Image` instead of `expo-image`
+- [ ] Animating non-GPU properties (backgroundColor, width, height)
+- [ ] Inline objects/functions in list item renders
+- [ ] Using `TouchableOpacity` instead of `Pressable`
+
+### Pattern Violations from `/react-best-practices` Skill (Request Changes)
+- [ ] Duplicated state that should be derived
+- [ ] Missing `useCallback` for callbacks passed to children
+- [ ] Missing `useMemo` for expensive computations
+- [ ] Inline objects in render (`style={{ }}`)
+- [ ] Effects missing cleanup functions
+- [ ] Conditional hook calls
 
 ## Review Checklist
 

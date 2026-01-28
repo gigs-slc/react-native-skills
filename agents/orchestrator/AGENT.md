@@ -27,8 +27,28 @@ Before ANY work, you MUST:
 
 1. **Read AI_CONSTRAINTS.md** - Contains non-negotiable rules that ALL agents must follow
 2. **Read AI_PROGRESS.md** - Contains current work status, completed items, and pending tasks
+3. **Load the skills** - Ensure sub-agents have access to best practices:
+   - `/react-native` - 65 files of Callstack + Vercel optimization patterns
+   - `/react-best-practices` - 62 files of React patterns and architecture
 
-If these files don't exist, inform the user they need to create them using the templates provided.
+If governance files don't exist, inform the user they need to create them using the templates provided.
+
+## Required Skills Knowledge
+
+All sub-agents MUST follow the patterns defined in these skills:
+
+### From `/react-native` Skill (Critical Rules)
+- **Rendering**: Never use `&&` with falsy values, always wrap text in `<Text>`
+- **Lists**: Use FlashList/virtualization, memoize items, stabilize callbacks
+- **Animation**: Only animate transform/opacity, use Reanimated worklets
+- **Images**: Use expo-image, compress appropriately
+- **Navigation**: Use native stack/tabs over JS navigators
+
+### From `/react-best-practices` Skill (Core Patterns)
+- **State**: Minimize state, derive values, use dispatch updaters
+- **Hooks**: Follow rules of hooks, proper dependency arrays
+- **Performance**: Memoize expensive computations, avoid inline objects
+- **Architecture**: Composition over inheritance, single responsibility
 
 ## Available Sub-Agents
 

@@ -36,6 +36,41 @@ Before ANY analysis:
 
 1. **Read AI_CONSTRAINTS.md** - Understand performance requirements
 2. **Read AI_PROGRESS.md** - Check for related performance work
+3. **Load the skills** - Reference performance guidelines:
+   - `/react-native` - Callstack profiling + Vercel patterns (65 files)
+   - `/react-best-practices` - React performance patterns
+
+## Skills-Based Performance Analysis
+
+Use these skills as your performance checklist:
+
+### From `/react-native` Skill - Critical Performance Rules
+
+Reference `skills/react-native/references/` for profiling guides:
+- `js-measure-fps.md` - FPS monitoring setup
+- `js-profile-react.md` - React DevTools profiling
+- `js-memory-leaks.md` - Memory leak detection
+- `js-animations-reanimated.md` - Animation performance
+
+Reference `skills/react-native/rules/` for code patterns:
+- `list-performance-*.md` - 8 rules for list optimization
+- `animation-*.md` - GPU-only animations
+- `react-state-*.md` - State that minimizes re-renders
+
+### Key Metrics (from Callstack Guide)
+| Metric | Target | How to Measure |
+|--------|--------|----------------|
+| FPS | 60fps | React Native DevTools |
+| JS Frame | <16ms | Performance monitor |
+| TTI | <2s | Custom markers |
+| Memory | Stable | Xcode/Android Studio |
+
+### From `/react-best-practices` Skill - React Performance
+
+Reference for patterns that prevent re-renders:
+- Memoization strategy (when to use memo/useMemo/useCallback)
+- State colocation (state close to where it's used)
+- Context splitting (separate frequently changing values)
 
 ## What You DON'T Do
 

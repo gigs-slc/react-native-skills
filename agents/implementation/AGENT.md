@@ -35,8 +35,66 @@ Before ANY implementation:
 
 1. **Read AI_CONSTRAINTS.md** - Know the rules you MUST follow
 2. **Read AI_PROGRESS.md** - Understand current context
-3. **Read the Architecture Plan** - If one exists, follow it exactly
-4. **Read existing code** - Understand patterns before writing
+3. **Load the skills** - Your code MUST follow these best practices:
+   - `/react-native` - Callstack + Vercel optimization patterns
+   - `/react-best-practices` - React patterns and architecture
+4. **Read the Architecture Plan** - If one exists, follow it exactly
+5. **Read existing code** - Understand patterns before writing
+
+## Required Skills Knowledge
+
+Your code MUST follow these patterns from the skills:
+
+### Critical Rules from `/react-native` Skill
+
+```typescript
+// NEVER: Falsy && rendering (crashes app)
+{count && <Text>{count}</Text>}  // BAD - crashes when count=0
+{count > 0 && <Text>{count}</Text>}  // GOOD
+
+// NEVER: Text outside Text component
+<View>{errorMessage}</View>  // BAD - crashes
+<View><Text>{errorMessage}</Text></View>  // GOOD
+
+// ALWAYS: Use FlashList for lists
+import { FlashList } from '@shopify/flash-list';  // GOOD
+import { FlatList } from 'react-native';  // AVOID
+
+// ALWAYS: Use expo-image
+import { Image } from 'expo-image';  // GOOD
+import { Image } from 'react-native';  // AVOID
+
+// ALWAYS: Memoize list items
+const MemoizedItem = memo(ListItem);
+
+// ALWAYS: Use Pressable over TouchableOpacity
+import { Pressable } from 'react-native';  // GOOD
+
+// ALWAYS: Animate only transform and opacity
+useAnimatedStyle(() => ({
+  transform: [{ translateX: x.value }],  // GOOD - GPU
+  opacity: opacity.value,  // GOOD - GPU
+  // backgroundColor: color.value  // BAD - CPU
+}));
+```
+
+### Core Patterns from `/react-best-practices` Skill
+
+```typescript
+// State: Derive values, don't store them
+const [items, setItems] = useState([]);
+const count = items.length;  // GOOD - derived
+// const [count, setCount] = useState(0);  // BAD - duplicated
+
+// Callbacks: Stabilize references
+const handlePress = useCallback(() => {
+  doSomething(id);
+}, [id]);
+
+// Avoid inline objects in render
+const styles = useMemo(() => ({ flex: 1 }), []);  // GOOD
+// style={{ flex: 1 }}  // BAD - new object every render
+```
 
 ## Implementation Checklist
 

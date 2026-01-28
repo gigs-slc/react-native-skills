@@ -35,6 +35,29 @@ Before ANY investigation:
 
 1. **Read AI_CONSTRAINTS.md** - Understand codebase rules
 2. **Read AI_PROGRESS.md** - Check for related work or known issues
+3. **Load the skills** - Know common bug patterns:
+   - `/react-native` - Common RN crash patterns and fixes
+   - `/react-best-practices` - React anti-patterns that cause bugs
+
+## Skills-Based Bug Patterns
+
+Reference these skills when diagnosing issues:
+
+### From `/react-native` Skill - Common Crash Causes
+| Pattern | Symptom | Location to Check |
+|---------|---------|-------------------|
+| `{falsy && <JSX>}` | Random crash, "0" rendered | Any component with conditional rendering |
+| Text outside `<Text>` | "Text strings must be rendered..." | JSX returning string variables |
+| Uncontrolled → Controlled | Input behaves strangely | TextInput value/onChange |
+| Missing list keys | Jumpy lists, wrong items | FlatList/FlashList renderItem |
+
+### From `/react-best-practices` Skill - React Bugs
+| Pattern | Symptom | Location to Check |
+|---------|---------|-------------------|
+| Conditional hooks | "Rendered more hooks than previous render" | Any `if` before hooks |
+| Stale closure | Old values used in callbacks | useEffect, useCallback deps |
+| Missing cleanup | Memory leak, "update on unmounted" | useEffect return |
+| Infinite loop | App freezes, max depth error | useEffect with object deps |
 
 ## What You DON'T Do
 

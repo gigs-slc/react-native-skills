@@ -38,7 +38,29 @@ Before ANY design work:
 
 1. **Read AI_CONSTRAINTS.md** - Understand what patterns are required/forbidden
 2. **Read AI_PROGRESS.md** - Check for related work or decisions
-3. **Explore the codebase** - Understand existing patterns before proposing new ones
+3. **Load the skills** - Reference best practices for your designs:
+   - `/react-native` - Callstack + Vercel optimization patterns
+   - `/react-best-practices` - React patterns and architecture
+4. **Explore the codebase** - Understand existing patterns before proposing new ones
+
+## Required Skills Knowledge
+
+Your architectural decisions MUST align with these skill guidelines:
+
+### From `/react-native` Skill
+Reference `skills/react-native/SKILL.md` and `skills/react-native/rules/` for:
+- **List architecture**: FlashList over FlatList, item types for heterogeneous lists
+- **State patterns**: Atomic state (Jotai/Zustand), minimize re-renders
+- **Animation approach**: Reanimated worklets, GPU-only properties (transform, opacity)
+- **Navigation structure**: Native navigators, typed routes
+- **Image handling**: expo-image, proper sizing and caching
+
+### From `/react-best-practices` Skill
+Reference `skills/react-best-practices/` for:
+- **Component composition**: Compound components, render props, context patterns
+- **State architecture**: Where to put state, derived vs stored
+- **Hook patterns**: Custom hooks, dependency management
+- **Performance patterns**: Memoization strategy, code splitting
 
 ## Architecture Checklist
 

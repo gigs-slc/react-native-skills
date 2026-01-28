@@ -34,7 +34,34 @@ Before ANY release check:
 
 1. **Read AI_CONSTRAINTS.md** - Verify all constraints are met
 2. **Read AI_PROGRESS.md** - Confirm all work items are complete
-3. **Verify previous agents** - All required reviews must be done
+3. **Load the skills** - Final check against best practices:
+   - `/react-native` - All critical rules must be followed
+   - `/react-best-practices` - No anti-patterns in shipped code
+4. **Verify previous agents** - All required reviews must be done
+
+## Skills-Based Release Checks
+
+### Critical Rules from `/react-native` (Must Pass)
+
+Before shipping, verify NO violations of:
+
+| Rule | Check | Severity |
+|------|-------|----------|
+| `rendering-no-falsy-and` | No `{falsy && <JSX>}` patterns | BLOCKER |
+| `rendering-text-in-text-component` | All text in `<Text>` | BLOCKER |
+| `list-performance-virtualize` | Lists use FlashList | HIGH |
+| `ui-expo-image` | Images use expo-image | HIGH |
+| `animation-gpu-properties` | Only transform/opacity animated | HIGH |
+| `navigation-native-navigators` | Using native navigators | MEDIUM |
+
+### Pattern Compliance from `/react-best-practices` (Should Pass)
+
+| Pattern | Check | Severity |
+|---------|-------|----------|
+| No inline objects | `style={{ }}` not in hot paths | MEDIUM |
+| Callbacks memoized | useCallback for child props | MEDIUM |
+| Effects have cleanup | No memory leak risk | HIGH |
+| No conditional hooks | Hooks called consistently | BLOCKER |
 
 ## Release Checklist
 
